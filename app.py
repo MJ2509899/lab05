@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 
-app = Flask(__name__)
+# 👇 Tell Flask to look for HTML files in the "src" folder
+app = Flask(__name__, template_folder='src', static_folder='static')
 
 # In-memory list to store user data
 users = []
